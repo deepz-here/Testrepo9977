@@ -1,0 +1,32 @@
+pipeline:
+  name: New
+  identifier: New
+  projectIdentifier: Demo
+  orgIdentifier: default
+  tags: {}
+  properties:
+    ci:
+      codebase:
+        connectorRef: account.Github_OAuth_1689838783895
+        repoName: Testrepo9977
+        build: <+input>
+  stages:
+    - stage:
+        name: Build
+        identifier: Build
+        description: ""
+        type: CI
+        spec:
+          cloneCodebase: true
+          platform:
+            os: Linux
+            arch: Amd64
+          runtime:
+            type: Docker
+            spec: {}
+          execution:
+            steps:
+              - stepGroup:
+                  name: Untitled
+                  identifier: fa8d5c21-9183-547e-829a-bc7f1ba408c2
+                  steps: []
