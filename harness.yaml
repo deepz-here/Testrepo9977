@@ -1,0 +1,8 @@
+stages:
+  - stage:
+      name: Build
+      execution:
+        steps:
+          - step:
+              name: Echo Hello World
+              run: echo "Hello World"
