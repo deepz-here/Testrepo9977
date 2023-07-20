@@ -31,3 +31,5 @@ pipeline:
         connectorRef: account.Github_OAuth_1689838783895
         repoName: https://github.com/deepz-here/Testrepo9977.git
         build: <+input>
+  delegateSelectors:
+    - docker-delegate
