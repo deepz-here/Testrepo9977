@@ -4,12 +4,6 @@ pipeline:
   projectIdentifier: Demo
   orgIdentifier: default
   tags: {}
-  properties:
-    ci:
-      codebase:
-        connectorRef: account.Github_OAuth_1689838783895
-        repoName: Testrepo9977
-        build: <+input>
   stages:
     - stage:
         name: Build
@@ -26,7 +20,14 @@ pipeline:
             spec: {}
           execution:
             steps:
-              - stepGroup:
-                  name: Untitled
-                  identifier: fa8d5c21-9183-547e-829a-bc7f1ba408c2
-                  steps: []
+              - step:
+                  type: Run
+                  name: Run_1
+                  identifier: Run_1
+                  spec: {}
+  properties:
+    ci:
+      codebase:
+        connectorRef: account.Github_OAuth_1689838783895
+        repoName: https://github.com/deepz-here/Testrepo9977.git
+        build: <+input>
